@@ -1,5 +1,5 @@
-#Python进阶
-##书籍介绍
+# Python进阶
+## 书籍介绍
 《Python进阶》是《Intermediate Python》的中文译本。  
 链接：[https://www.gitbook.com/book/eastlakeside/interpy-zh/details](https://github.com/qiyidefeng/reading-notes)
 
@@ -14,7 +14,7 @@ def get_info(self, *args):
 someclass.get_info = get_info
 ```
 
-##调试
+## 调试
 - 方法一：`python -m pdb test.py`
 - 方法二：脚本内部运行
 ```python
@@ -30,7 +30,7 @@ pdb.set_trace()
 - `n`: 单步调过
 
 
-##可迭代对象、迭代器
+## 可迭代对象、迭代器
 - **可迭代对象**：Python中任意的对象，只要它定义了可以返回一个迭代器的`__iter__`方法，或者定义了可以支持下标索引的`__getitem__`方法(这些双下划线方法会在其他章节中全面解释)，那么它就是一个可迭代对象。
 - **迭代器**：任意对象，只要定义了`next`(Python2) 或者`__next__`方法，它就是一个迭代器。
 
@@ -43,7 +43,7 @@ my_iter = iter(my_string)
 next(my_iter)
 ```
 
-##map, filter, reduce
+## map, filter, reduce
 ```python
 items = [1, 2, 3, 4, 5]
 squared = list(map(lambda x: x**2, items))
@@ -63,7 +63,7 @@ from functools import reduce
 product = reduce( (lambda x, y: x * y), [1, 2, 3, 4] )
 ```
 
-##set
+## set
 检查列表中是否包含重复的元素
 ```python
 some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
@@ -71,13 +71,13 @@ duplicates = set([x for x in some_list if some_list.count(x) > 1])
 print(duplicates)
 ```
 
-##三元运算符
+## 三元运算符
 ```python
 is_fat = True
 state = "fat" if is_fat else "not fat"
 ```
 
-##变量&对象
+## 变量&对象
 ```python
 def hi(name="yasoob"):
     return "hi " + name
@@ -97,7 +97,7 @@ print(greet())
 #outputs: 'hi yasoob'
 ```
 
-##装饰器
+## 装饰器
 应用实例：授权检查
 ```python
 from functools import wraps
